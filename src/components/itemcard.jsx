@@ -1,12 +1,11 @@
 function ItemCard({ item }) {
-  console.log("Item:", item)
   return (
     <div className="item-card">
-      <h3>{item.title}</h3>
+      <h3>{item.item_name}</h3>
       <p>{item.description}</p>
       <p>Price: £{item.price}</p>
-      {item.image_url && <img src={item.image_url} alt={item.title} width={150} />}
-      <p>Listed by: {item.username}</p>
+      {item.img_url && <img src={item.img_url} alt={item.item_name} width={150} />}
+      <p>Listed by: {item.seller_name}</p>
     </div>
   )
 }

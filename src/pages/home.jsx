@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 function Home() {
-  const categories = ["Electronics", "relics", "household"]
+  const categories = ["electronics", "clothing", "household"]
 
   return (
     <div>
@@ -9,7 +9,9 @@ function Home() {
       <ul>
         {categories.map(cat => (
           <li key={cat}>
-            <Link to={`/category/${cat}`}>{cat.charAt(0).toUpperCase() + cat.slice(1)}</Link>
+            <Link to={`/category/${cat}`}>
+            {cat.charAt(0).toUpperCase() + cat.slice(1)}
+            </Link>
           </li>
         ))}
       </ul>
